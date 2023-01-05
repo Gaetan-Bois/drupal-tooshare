@@ -1,0 +1,20 @@
+name: Gaetan Theme
+description: This is a demo theme for learning
+type: theme
+base theme: false
+core_version_requirement: ^8 || ^9 || ^10
+
+version: 1.0
+libraries:
+  - gaetan_theme/global-styling
+regions:
+  menu: Menu
+  header: Header
+  download: Download
+  content: Content
+  sidebar: Sidebar
+  footer: Footer
+features:
+  - favicon
+  - logo
+  - slogan

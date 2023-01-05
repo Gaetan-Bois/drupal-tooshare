@@ -1,0 +1,14 @@
+global-styling:
+  css:
+    theme:
+      css/style.css: {}
+      css/print.css: {}
+      library/bootstrap-select/bootstrap-select.min.css: {}
+  js:
+    js/script.js: {}
+    library/slick/slick.min.js: { }
+    library/bootstrap-select/bootstrap-dropdown.js: { }
+    library/bootstrap-select/bootstrap-select.min.js: { }
+    assets/js/main.js: { }
+  dependencies:
+    - core/jquery

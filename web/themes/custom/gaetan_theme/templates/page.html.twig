@@ -1,0 +1,21 @@
+<div id="nav-bar">
+  <div class="container">
+    {{ page.menu }}
+    <a href="{{ front_page }}" class="logo-wrapper">
+      <img src="{{ logopath }}" alt="" class="logo">
+      {{ site_slogan }}
+    </a>
+  </div>
+</div>
+<div class="header">
+  <div class="container">
+    {{ page.header }}
+  </div>
+</div>
+<div class="download-block">
+  <div class="container">
+    {{ page.download }}
+  </div>
+</div>
+{{ page.content }}
+{{ page.footer }}

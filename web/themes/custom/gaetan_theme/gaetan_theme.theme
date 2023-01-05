@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * @file
+ * Function to support theming in the gaetan_theme theme
+ */
+
+use Drupal\Core\Link;
+use Drupal\user\Entity\User;
+use Drupal\user\RoleInterface;
+
+function gaetan_theme_preprocess_html(&$variables) {
+  // Récuperer le site name / le slogan / logo path
+  $variables['test'] = [
+    '#markup' => 'This is a test',
+  ];
+  if (User::load(\Drupal::currentUser()->id())->hasRole(RoleInterface::AUTHENTICATED_ID)) {
+    $variables['#attached']['library'][]= 'gaetan_theme/admin';
+  }
+  $site_config = \Drupal::config('system.site');
+  $variables['site_name'] = $site_config->get('name');
+  $variables['site_slogan'] = $site_config->get('slogan');
+  $variables['logopath'] = theme_get_setting('logo.url');
+}
+
